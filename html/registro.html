@@ -1,0 +1,103 @@
+<img id="formulario-bg" class="contenido__img" src="images/registro.jpg" alt="">
+
+<img id="terminos" class="contenido__img" src="images/condiciones.jpg" style="display: none;" alt="">
+
+<div class="contenido__form">
+
+	<div id="formulario">
+
+		<div class="contenido__wrapper-box"><input type="text" class="contenido__box" placeholder="Nombre del padre" required></div>
+
+		<div class="contenido__wrapper-box"><input type="email" class="contenido__box" placeholder="e-mail del padre" required></div>
+
+		<div class="contenido__wrapper-box"><input type="text" class="contenido__box" placeholder="Nombre del niño" required></div>
+
+		<div class="contenido__wrapper-box--half">
+
+			<input class="contenido__radio-genre contenido__radio--m"type="radio" name="genero" id="masculino" required>
+
+			<label for="masculino">masculino</label>
+
+		</div>
+
+		<div class="contenido__wrapper-box--half">
+
+			<input class="contenido__radio-genre contenido__radio--f"type="radio" name="genero" id="femenino" required>
+
+			<label for="femenino">femenino</label>
+
+		</div>
+
+		<div class="contenido__wrapper-box--half">
+
+			<label class="contenido__label-controles" for="edad">Edad</label>
+
+			<div class="contenido__wrapper-box--controles">
+
+				<input class="contenido__controles-input" type="text" value="0" name="edad" id="edad" maxlength="13" required readonly>
+
+				<div class="contenido__controles">
+
+					<span onclick="aumentar(this)" data-rel="edad"><img src="images/arrow_up.png" alt=""></span>
+
+					<span onclick="disminuir(this)" data-rel="edad"><img src="images/arrow_down.png" alt=""></span>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="contenido__wrapper-box--half">
+
+			<label class="contenido__label-controles" for="estrato">Estrato</label>
+
+			<div class="contenido__wrapper-box--controles">
+
+				<input class="contenido__controles-input" type="text" value="1" name="estrato" id="estrato" required readonly>
+
+				<div class="contenido__controles">
+
+					<span onclick="aumentar(this)" data-rel="estrato"><img src="images/arrow_up.png" alt=""></span>
+
+					<span onclick="disminuir(this)" data-rel="estrato"><img src="images/arrow_down.png" alt=""></span>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="contenido__terminos">
+
+			<input type="checkbox" name="terminos_check" required><label class="contenidos__terminos-enlace" onclick="mostrar_terminos()" for="terminos_check">Acepto terminos y condiciones</label>
+
+		</div>
+
+	</div>
+
+	<div id="terminos-text" class="contenido__terminos" style="display: none;">
+
+		<p>Juega, conoce en primicia y elige las carátulas de 2016.</p>
+
+		<p>Si eres uno de los 5.000 primeros en jugar podrás ganar un bono del 30%, del 40% y hasta del 100% en Tienda Norma en los 10 cuadernos cocidos seleccionados.</p>
+
+		<p>Envío gratis por compras mayores a $30.000 y a los ganadores del bono del 100%.</p>
+
+		<p>Sólo se podrán registrar 2 niños por cada adulto responsable.</p>
+
+		<p style="cursor:pointer;text-align:center;"><img src="images/btn_atras.png" onclick="mostrar_registro()" alt=""></p>
+
+	</div>
+
+</div>
+
+
+
+<div id="btn__terminos" class="contenido__button">
+
+	<button id="juego" onclick="accion_btn(this)" data-rel="juego">terminos</button>
+
+	<button id="terminos" onclick="accion_btn(this)" data-rel="terminos">terminos</button>
+
+</div>

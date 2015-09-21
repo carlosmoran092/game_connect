@@ -1,0 +1,177 @@
+html, body{
+    width: 100%;
+    height: 100%;    
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #1F86C1;
+    font-size: 16px;
+}
+#btn__ingresar{
+    bottom: 25px;
+}
+#btn__ingresar button{
+    background: url("../images/btn_ingresar.png") left top no-repeat;
+    height: 58px;    
+    width: 136px;
+}
+#btn__terminos{
+    bottom: 35px;
+}
+#btn__terminos button{
+    background: url("../images/btn_terminos.png") left top no-repeat;
+    height: 38px;    
+    width: 121px;
+}
+#btn__terminos #juego{
+    background: url("../images/btn_continuar_registro.png") left top no-repeat;
+    width: 88px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.contenido__button{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.contenido__box{
+    background: url("../images/registro-box.png") center top no-repeat;
+    border: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: white;
+    height: 52px;
+    padding-left: 20px; 
+    width: 372px;
+}
+.contenido__button button{
+    border: none;
+    cursor: pointer;  
+    overflow: hidden;
+    text-indent: -999px;  
+}
+.contenido__controles{
+    display: inline-block;
+    height: 45px;
+    padding-top: 5px;
+    vertical-align: middle;
+}
+.contenido__controles span{
+    cursor: pointer;
+    display: block;
+}
+.contenido__controles-input{
+    background: none;
+    border: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: top;
+    width: 50px;
+}
+.contenido__form{
+    color: white;
+    font-family: 'Amaranth';
+    font-size: 18px;
+    height: 380px;
+    margin: 110px auto 0 auto;
+    width: 372px;
+}
+.contenido__form input{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;    
+}
+.contenido__img{
+    left: 0;
+    position: absolute;
+    top: 0;
+    vertical-align: top;
+    z-index: -1;
+}
+.contenido__label-controles{
+    display: inline-block;
+    margin-right: 20px;
+}
+.contenido__preload{
+    left: 5px;
+    position: absolute;
+    top: 5px;
+}
+.contenido__radio-genre:not(old){
+    width   : 28px;
+    margin: 0;
+    padding : 0;
+    opacity : 0;
+}
+.contenido__radio-genre:not(old) + label{
+    color: white;
+    display: inline-block;
+    margin-left: -28px;
+    padding-right: 100px;
+    background   : url("../images/bg_sexo_box.png") no-repeat right 0;
+    line-height  : 50px;
+    width: 53px;
+}
+.contenido__radio-genre:not(old):checked + label{
+    background: url("../images/bg_sexo_box_x.png") no-repeat right 0;
+}
+.contenido__radio--f{
+    margin-left: 85px;    
+}
+.contenido__radio--m{
+    margin-left: 140px;    
+}
+.contenido__terminos{
+    margin-top: 25px;
+    text-align: center;
+}
+.contenido__wrapper-box{
+    display: block;
+    margin: 2px auto;
+    text-align: center;
+}
+.contenido__terminos{
+    position: relative;
+}
+.contenidos__terminos-enlace{
+    cursor: pointer;
+}
+.contenidos__terminos-enlace:hover{
+    text-decoration: underline;
+}
+.contenido__wrapper-box--controles{
+    background: url("../images/bg_controles.png") left top no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+.contenido__wrapper-box--half{
+    display: inline-block;
+    margin: 5px 0;
+    width: 49%;
+}
+.contenido__wrapper-box--half:last-child{
+    margin-left: -4px;
+}
+.layer{
+    height: 526px;
+    position: relative;
+    width: 760px;
+}
+/****/ 
+/*HELPERS*/
+::-webkit-input-placeholder {color: white; font-family: 'Amaranth'; font-size: 18px;}
+:-moz-placeholder {color: white; font-family: 'Amaranth'; font-size: 18px;}
+::-moz-placeholder { color: white; font-family: 'Amaranth'; font-size: 18px;}
+:-ms-input-placeholder { color: white; font-family: 'Amaranth'; font-size: 18px;}
