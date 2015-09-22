@@ -6,15 +6,17 @@
 
 	<div id="formulario">
 
-		<div class="contenido__wrapper-box"><input type="text" class="contenido__box" placeholder="Nombre del padre" required></div>
+		<form action="" autocomplete="off">  <!-- Formulario de registro -->
 
-		<div class="contenido__wrapper-box"><input type="email" class="contenido__box" placeholder="e-mail del padre" required></div>
+		<div class="contenido__wrapper-box"><input type="text" class="contenido__box" placeholder="Nombre del padre" id="nom_padre" value="" autocomplete="off" required></div>
 
-		<div class="contenido__wrapper-box"><input type="text" class="contenido__box" placeholder="Nombre del niño" required></div>
+		<div class="contenido__wrapper-box"><input type="email" class="contenido__box" placeholder="e-mail del padre" id="nom_mail" value="" autocomplete="off" required></div>
+
+		<div class="contenido__wrapper-box"><input type="text" class="contenido__box" placeholder="Nombre del niño o niña" id="nom_hijo" value="" autocomplete="off" required></div>
 
 		<div class="contenido__wrapper-box--half">
 
-			<input class="contenido__radio-genre contenido__radio--m"type="radio" name="genero" id="masculino" required>
+			<input class="contenido__radio-genre contenido__radio--m" type="radio" name="genero" id="masculino" value="masculino"  required>
 
 			<label for="masculino">masculino</label>
 
@@ -22,7 +24,7 @@
 
 		<div class="contenido__wrapper-box--half">
 
-			<input class="contenido__radio-genre contenido__radio--f"type="radio" name="genero" id="femenino" required>
+			<input class="contenido__radio-genre contenido__radio--f" type="radio" name="genero" id="femenino" value="femenino" required>
 
 			<label for="femenino">femenino</label>
 
@@ -70,7 +72,8 @@
 
 		<div class="contenido__terminos">
 
-			<input type="checkbox" name="terminos_check" required><label class="contenidos__terminos-enlace" onclick="mostrar_terminos()" for="terminos_check">Acepto terminos y condiciones</label>
+			<input type="checkbox" name="terminos_check" id="terminos_check" required>
+			<label class="contenidos__terminos-enlace" onclick="mostrar_terminos()" for="terminos_check">Acepto terminos y condiciones</label>
 
 		</div>
 
@@ -96,8 +99,10 @@
 
 <div id="btn__terminos" class="contenido__button">
 
-	<button id="juego" onclick="accion_btn(this)" data-rel="juego">terminos</button>
+	<button type="submit" id="juego" onclick="registerValues()" data-rel="juego">continuar</button>
 
 	<button id="terminos" onclick="accion_btn(this)" data-rel="terminos">terminos</button>
 
 </div>
+
+</form>
