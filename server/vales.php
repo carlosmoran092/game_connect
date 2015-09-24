@@ -1,27 +1,49 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Codigos</title>
 
-$host="tiendanorma.c6yhynbnhp56.us-west-2.rds.amazonaws.com";
-$port=3306;
-$socket="";
-$user="normastore";
-$password="";
-$dbname="";
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+	span{font-size:17px;}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="col-md-9 col-md-offset-1"><br>
+		<?php
+$servername = "localhost";
+$username = "albacorp_test";
+$password = "oL38HSZ^WRs4";
+$dbname = "albacorp_app_facebook";
 
-$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
-	or die ('Could not connect to the database server' . mysqli_connect_error());
+$conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
 
-//$con->close();
+$sql = "SELECT * FROM  vales ";
+$result = $conn->query($sql);
 
-$query = "SELECT id_cart_rule,code FROM tiendanorma_test.tienda_normacart_rule";
-
-
-if ($stmt = $con->prepare($query)) {
-    $stmt->execute();
-    $stmt->bind_result($id_cart_rule, $code);
-    while ($stmt->fetch()) {
-        printf("%s, %s\n", $id_cart_rule, $code);
+if ($result->num_rows > 0) {
+	echo("<h2>500 benditos codigos ,<small>Faltan 4500<small></h2>");
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<span>id: " . $row["id"]. "   - Code: " . $row["code"]. "</span><br>";
     }
-    $stmt->close();
+} else {
+    echo "0 results";
 }
-
+$conn->close();
 ?>
+	</div>
+	
+
+</div>
+	
+</body>
+</html>
+
